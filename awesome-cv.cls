@@ -593,7 +593,7 @@
 \newcommand*{\cventrycol}[6]{%
   \vspace{-6.0mm}
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  \setlength{\extrarowheight}{4pt}
   \begin{tabularx}{\textwidth}{XXX}
     \entrytitlestyle{#1} & \entrytitlestyle{#2} & \entrytitlestyle{#3} \\
     \descriptionstyle{#4} & \descriptionstyle{#5} & \descriptionstyle{#6} \\

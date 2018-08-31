@@ -1,8 +1,8 @@
 # Résumé
 
-You can see the [PDF here.](https://raw.githubusercontent.com/DevonMorris/Resume-CV/master/examples/resume.pdf)
+You can see the [PDF here.](https://github.com/DevonMorris/Resume-CV/blob/master/examples/resume.pdf)
 
-[![Résumé](https://raw.githubusercontent.com/DevonMorris/Resume-CV/master/examples/resume-0.png)](https://raw.githubusercontent.com/DevonMorris/Resume-CV/master/examples/resume.pdf) 
+[![Résumé](https://raw.githubusercontent.com/DevonMorris/Resume-CV/master/examples/resume-0.png)](https://github.com/DevonMorris/Resume-CV/blob/master/examples/resume.pdf) 
 
 <!--# Cover Letter-->
 

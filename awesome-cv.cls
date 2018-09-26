@@ -591,7 +591,7 @@
 }
 
 \newcommand*{\cventrycol}[6]{%
-  \vspace{-6.0mm}
+  \vspace{-10.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{4pt}
   \begin{tabularx}{\textwidth}{XXX}

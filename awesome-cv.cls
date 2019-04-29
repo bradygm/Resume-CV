@@ -84,6 +84,7 @@
 \RequirePackage{parskip}
 % Needed to deal hyperlink
 \RequirePackage[hidelinks,unicode]{hyperref}
+\RequirePackage{etaremune}
 
 \RequirePackage{tabularx}
 \hypersetup{%
@@ -200,7 +201,7 @@
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
@@ -556,7 +557,7 @@
   \paragraphstyle
 }{%
   \par
-  \vspace{2mm}
+  \vspace{-1mm}
 }
 
 % Define a double column for CV
@@ -569,7 +570,7 @@
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
-  \vspace{\acvSectionContentTopSkip}
+  \vspace{1.0mm}
   \begin{center}
 }{%
   \end{center}
@@ -577,6 +578,18 @@
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\scventry}[4]{%
+  \vspace{0.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \ifempty{#2#3}
+      {\entrytitlestyle{#1} & \entrydatestyle{#4} \\}
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+  \end{tabular*}%
+}
+
 \newcommand*{\cventry}[5]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
@@ -670,6 +683,17 @@
 }{%
   \end{itemize}
   \end{justify}
+  \vspace{-2.0mm}
+}
+
+% Define an environment for cvitems(for cventry)
+\newenvironment{cvenum}{%
+  \paragraphstyle
+  \vspace{-1.0mm}
+  \begin{enumerate}[leftmargin=\parindent, align=left, labelwidth=\parindent,labelsep=0pt]
+    \setlength{\parskip}{0pt}
+}{%
+  \end{enumerate}
   \vspace{-4.0mm}
 }
 

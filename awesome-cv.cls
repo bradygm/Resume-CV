@@ -557,7 +557,7 @@
   \paragraphstyle
 }{%
   \par
-  \vspace{-1mm}
+  \vspace{1mm}
 }
 
 % Define a double column for CV
@@ -579,7 +579,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\scventry}[4]{%
-  \vspace{0.0mm}
+  \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -588,6 +588,7 @@
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
   \end{tabular*}%
+  \vspace{2.0mm}
 }
 
 \newcommand*{\cventry}[5]{%
@@ -644,7 +645,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{L{1.0cm} L{\textwidth - 4.0cm} R{3.0cm}}
 }{%
     \end{tabular*}
   \end{center}
@@ -662,14 +663,14 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvskill}[2]{%
+\newcommand*{\cvskill}[2]{
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 

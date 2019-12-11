@@ -645,7 +645,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{L{1.0cm} L{\textwidth - 4.0cm} R{3.0cm}}
+    \begin{tabular*}{\textwidth}{L{1.0cm} L{\textwidth - 1.0cm} R{1.0cm}}
 }{%
     \end{tabular*}
   \end{center}
